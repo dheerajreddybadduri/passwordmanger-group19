@@ -42,15 +42,7 @@ namespace PasswodManager
         Task
 addNewPassword(string app,string password)
         {
-            var uid = await SecureStorage.GetAsync("uid");
-            PasswordPostModel ppm = new PasswordPostModel();
-            ppm.app = app;
-            ppm.userId = uid;
-            ppm.password = password;
-            await api.SaveTodoItemAsync(ppm);
-            await load();
-            OnPropertyChanged("passwords");
-            OnPropertyChanged();
+            
         }
 
         //public async Task deletePassword(String todoId)
