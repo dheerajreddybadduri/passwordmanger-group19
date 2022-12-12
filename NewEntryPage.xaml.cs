@@ -21,8 +21,6 @@ public partial class NewEntryPage : ContentPage
 
 	private async void Button_Clicked(object sender, EventArgs e)
 	{
-		await App.vm.addNewPassword(appname, password);
-		await DisplayAlert("HUrray", "New Application password saved", "View all");
-		await Navigation.PopAsync();
+		
 	}
 }
