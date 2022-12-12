@@ -15,9 +15,7 @@ public partial class LoginPage : ContentPage
         var uid = await pmService.loginUser(email, pass);
         if (uid != null)
         {
-            await SecureStorage.SetAsync("uid", uid);
-            await Navigation.PushAsync(new MainPage());
-        }
+           
         else
         {
             await DisplayAlert("Alert", "Login Error, Please try again", "OK");
